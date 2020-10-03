@@ -30,6 +30,30 @@ class MercadoPago {
         );
         return $preferencia;
     }
+    
+    /**
+     * Cargamos los datos del pagador
+     * @param type $nombre
+     * @param type $email
+     * @param array $telefono [0 => area_codigo, 1 => numero]
+     * @param array $domicilio [0 => nombre calles, 1 => numero de la casa, 3 => codigo postal]
+     */
+    static function crearPagador($nombre, $apellido, $email, array $telefono, array $domicilio) {
+        $pagador = new MercadoPago\Payer();
+        $pagador->name = $nombre;
+        $pagador->surname = $apellido;
+        $pagador->email = $email;
+        $pagador->phone = array(
+            'area_code' => $telefono[0],
+            'number' => $telefono[1]
+        );
+        $pagador->address = array(
+            'street_name' => $domicilio[0],
+            'street_number' => $domicilio[1],
+            'zip_code' => $domicilio[3]
+        );
+        return $pagador;
+    }
 
     /**
      * Configura la preferencia según tu producto o servicio:

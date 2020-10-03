@@ -33,8 +33,12 @@ de pagos se permiten, etc.
 >> - CrearPreferencia: con este método definimos la configuración de nuestra implementación. En este caso 
 >> por ejemplo estamos definiendo que no aceptamos pagos mediante el medio de pago “ticket” y “atm”. Tener 
 >> en cuenta que existen múltiples opciones de configuración por lo que deberá consultar la documentación 
->> oficial de mercado pago.    
->> CrearItemPreferencia: este método te permite crear un ítem. En este caso solo se carga el nombre/titulo, 
+>> oficial de mercado pago.
+
+>> - CrearPagador: este método nos permite cargar datos de quien esta realizando el pago para tener una 
+>> menor posibilidad de que el pago sea rechazado e información más detalla del usuario. 
+
+>> - CrearItemPreferencia: este método te permite crear un ítem. En este caso solo se carga el nombre/titulo, 
 >> el precio y la cantidad.
 
 >> - GuardarPreferencia: este metodo es el encargado de obtener la preferencia_id que necesitaremos para mostrar 
@@ -44,3 +48,7 @@ de pagos se permiten, etc.
     
 >> - Formulario: si todo esta bien este método nos mostrara el botón “pagar” con el que podremos realizar cobros 
 >> en nuestra web. Para ello es necesario pasarle la preferencia_id obtenida en el método anterior.
+
+
+##### Ejemplo de implementación
+En el archivo pagar.php que se encuentra en la carpeta vista se muestra como implementar la clase MercadoPago.
