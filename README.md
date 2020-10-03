@@ -23,21 +23,24 @@ es el encargado de definir las configuraciones de la implementación como que m�
 de pagos se permiten, etc.
 
 > Clase MercadoPago:
->> Constructor: en el constructor se especifican las credenciales de nuestra cuenta de mercado 
+>> - Constructor: en el constructor se especifican las credenciales de nuestra cuenta de mercado 
 >> pago con la que se van a realizar los cobros.
 >> Mediante la constante SERVIDOR_PRUEBAS especificamos si queremos usar las credenciales de nuestro 
 >> usuario de prueba o no (Esta constante no define una configuración de la api de mercado pago sino 
 >> que es un uso interno del proyecto para no tener que cambiar las credenciales cuando estamos en nuestro 
 >> entorno local).
->> CrearPreferencia: con este método definimos la configuración de nuestra implementación. En este caso 
+
+>> - CrearPreferencia: con este método definimos la configuración de nuestra implementación. En este caso 
 >> por ejemplo estamos definiendo que no aceptamos pagos mediante el medio de pago “ticket” y “atm”. Tener 
 >> en cuenta que existen múltiples opciones de configuración por lo que deberá consultar la documentación 
 >> oficial de mercado pago.    
 >> CrearItemPreferencia: este método te permite crear un ítem. En este caso solo se carga el nombre/titulo, 
 >> el precio y la cantidad.
->> GuardarPreferencia: este metodo es el encargado de obtener la preferencia_id que necesitaremos para mostrar 
+
+>> - GuardarPreferencia: este metodo es el encargado de obtener la preferencia_id que necesitaremos para mostrar 
 >> nuestro formulario de pago.
 >> Para obtener este id es necesario que le pasemos nuestros items a facturar creados en el método 
->> “CrearItemPreferencia”.    
->> Formulario: si todo esta bien este método nos mostrara el botón “pagar” con el que podremos realizar cobros 
+>> “CrearItemPreferencia”.
+    
+>> - Formulario: si todo esta bien este método nos mostrara el botón “pagar” con el que podremos realizar cobros 
 >> en nuestra web. Para ello es necesario pasarle la preferencia_id obtenida en el método anterior.
