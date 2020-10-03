@@ -1,1 +1,1 @@
-# imp-Checkout-MP
+# Implementación del Checkout de mercado pago  - Argentina
