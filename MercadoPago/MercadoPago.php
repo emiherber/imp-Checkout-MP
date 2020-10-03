@@ -52,10 +52,10 @@ class MercadoPago {
      * Cargamos el item antes creado y se lo agregamos
      * a la preferencia.
      * @param type $preferencia
-     * @param type $item
+     * @param type $items
      */
-    static function guardarPreferencia($preferencia, $item) {
-        $preferencia->items = array($item);
+    static function guardarPreferencia($preferencia, Array $items) {
+        $preferencia->items = $items;
         $preferencia->save();
         return $preferencia->id;
     }
