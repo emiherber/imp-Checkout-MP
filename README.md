@@ -23,8 +23,13 @@ es el encargado de definir las configuraciones de la implementación como que m�
 de pagos se permiten, etc.
 
 > Clase MercadoPago:
-    >> Constructor: en el constructor se especifican las credenciales de nuestra cuenta de mercado pago con la que se van a realizar los cobros.
-      Mediante la constante SERVIDOR_PRUEBAS especificamos si queremos usar las credenciales de nuestro usuario de prueba o no (Esta constante no define una configuración de la api de mercado pago sino que es un uso interno del proyecto para no tener que cambiar las credenciales cuando estamos en nuestro entorno local).
+
+    >> Constructor: en el constructor se especifican las credenciales de nuestra cuenta de mercado 
+    pago con la que se van a realizar los cobros.
+    Mediante la constante SERVIDOR_PRUEBAS especificamos si queremos usar las credenciales de nuestro 
+    usuario de prueba o no (Esta constante no define una configuración de la api de mercado pago sino 
+    que es un uso interno del proyecto para no tener que cambiar las credenciales cuando estamos en nuestro 
+    entorno local).
     
     >> CrearPreferencia: con este método definimos la configuración de nuestra implementación. En este caso por ejemplo estamos definiendo que no aceptamos pagos mediante el medio de pago “ticket” y “atm”. Tener en cuenta que existen múltiples opciones de configuración por lo que deberá consultar la documentación oficial de mercado pago.
     
